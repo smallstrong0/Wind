@@ -1,0 +1,94 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">收货人信息</view>
+                </view>
+                  <view class="weui-cell__bd">  
+                    <view class="weui-auto" bindtap='choose_addr'>
+                    {{info}}
+                    </view>
+                  </view>  
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">收货地址</view>
+                </view>
+                  <view class="weui-cell__bd">  
+                    <view class="weui-auto" bindtap='choose_addr'>
+                    {{addr}}
+                    </view>
+                  </view>  
+            </view>
+
+
+          
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">选择类别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindCategoryChange" value="{{categoryIndex}}" range="{{category}}">
+                        <view class="weui-select weui-select_in-select-after">{{category[categoryIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">打印方式</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindWayChange" value="{{wayIndex}}" range="{{way}}">
+                        <view class="weui-select weui-select_in-select-after">{{way[wayIndex]}}</view>
+                    </picker>
+                </view>
+            </view> 
+
+             <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">送达时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindTimeChange" value="{{timeIndex}}" range="{{time_list}}">
+                        <view class="weui-select weui-select_in-select-after">{{time_list[timeIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">页数</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type='number' bindinput='get_pages' placeholder="输入要打印的页数"/>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">消耗印币</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="weui-input" type='number'>
+                    {{coin}}印币
+                    </view>
+                </view>
+            </view>
+        </view>
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="备注信息" bindinput='get_remark'style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+
+  <view class="page__bd">
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="default" bindtap="openConfirm">确认</button>
+        </view>
+    </view>
+</view>

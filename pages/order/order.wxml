@@ -1,0 +1,44 @@
+<!-- <view class = "item" bindtap="result"  wx:for="{{list}}" data-id="{{item}}" wx:key="address_id">
+  
+<view class = "info">
+<text  >{{item.category}}</text>
+<text>{{item.ctime}}  {{item.phone}}</text>
+</view>
+
+
+</view> -->
+
+
+ <view class="page"> 
+  
+    <view class="page__bd" wx:for="{{list}}" data-id="{{item}}" wx:key="address_id">
+
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{item.category}}</view>
+                    <view class="weui-form-preview__value">{{item.coin}}印币</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">订单时间</view>
+                    <view class="weui-form-preview__value">{{item.ctime}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">收货地址</view>
+                    <view class="weui-form-preview__value">{{item.address}}</view>
+                    <view class="weui-form-preview__value">{{item.place}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">收货人</view>
+                    <view class="weui-form-preview__value">{{item.name}}</view>
+                    <view class="weui-form-preview__value">{{item.phone}}</view>
+                </view>
+            </view>
+            
+        </view>
+        
+
+    </view>
+ </view> 

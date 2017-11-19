@@ -1,0 +1,53 @@
+   {
+  "pages":[
+    "pages/commit/commit",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/detail/detail",
+    "pages/contact/contact",
+    "pages/vip/vip",
+    "pages/address_list/address_list",
+    "pages/address_add/address_add",
+    "pages/address_mod/address_mod",
+    "pages/order_detail/order_detail"
+  ],
+  "window":{
+    "navigationBarTitleText": "由印",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#FFC640"
+  },
+  "tabBar": {
+    "color": "#272636",
+    "selectedColor": "#FFC640",
+    "backgroundColor": "#fff",
+    "borderStyle": "#a8a8a8",
+    "list": [
+      {
+        "pagePath": "pages/commit/commit",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png",
+        "color":"white",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order-selected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
+
+}
