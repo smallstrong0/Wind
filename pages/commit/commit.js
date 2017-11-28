@@ -79,10 +79,10 @@ Page({
     var address_detail = that.data.address_detail
     if (address_detail != '' && that.data.pages != 0) {
       wx.showModal({
-        title: '提交订单',
-        content: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
-        confirmText: "提交",
-        cancelText: "再看看",
+        title: '圣旨',
+        content: '君上，请三思后提交',
+        confirmText: "下诏书",
+        cancelText: "再瞅瞅",
         success: function (res) {
           console.log(res);
           if (res.confirm) {
@@ -119,14 +119,15 @@ Page({
                         icon: 'success',
                         duration: 3000
                       });
+                      
                     }
                   });
                 },
              })
             }
-            console.log('提交')
+            console.log('任性提交')
           } else {
-            console.log('再看看')
+            console.log('再瞅瞅')
           }
       }
     });
