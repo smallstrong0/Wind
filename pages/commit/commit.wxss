@@ -1,5 +1,5 @@
 /* pages/commit/commit.wxss */
-.weui-auto{
-min-height:2.58823529em;
-line-height:2.58823529em 
+.weui-auto {
+    min-height: 2.58823529em;
+    line-height: 2.58823529em
 }

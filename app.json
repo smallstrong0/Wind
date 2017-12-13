@@ -1,5 +1,5 @@
-   {
-  "pages":[
+{
+  "pages": [
     "pages/commit/commit",
     "pages/my/my",
     "pages/order/order",
@@ -11,7 +11,7 @@
     "pages/address_mod/address_mod",
     "pages/order_detail/order_detail"
   ],
-  "window":{
+  "window": {
     "navigationBarTitleText": "由印",
     "navigationBarTextStyle": "white",
     "navigationBarBackgroundColor": "#FFC640"
@@ -26,7 +26,7 @@
         "pagePath": "pages/commit/commit",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-selected.png",
-        "color":"white",
+        "color": "white",
         "text": "主页"
       },
       {
@@ -49,5 +49,4 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   }
-
 }

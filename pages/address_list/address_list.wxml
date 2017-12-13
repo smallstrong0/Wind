@@ -1,27 +1,28 @@
-<view class = "item" bindtap="result"  wx:for="{{list}}" data-id="{{item}}" wx:key="address_id">
-  
-<view class = "info">
-<text  >地址：{{item.address}}{{item.place}}</text>
-<text>{{item.name}}  {{item.phone}}</text>
-</view>
+<view class="item" bindtap="result" wx:for="{{list}}" data-id="{{item}}" wx:key="address_id">
 
-<navigator url="../address_mod/address_mod?address={{item.address}}&name={{item.name}}&phone={{item.phone}}&qq={{item.qq}}&we_chat={{item.we_chat}}&place={{item.place}}&address_id={{item.address_id}}" >
-<view class = "modify">
-<image src = "../../images/modify.png"
-    mode = "widthFix" />
-</view>
-</navigator>
+    <view class="info">
+        <text>地址：{{item.address}}{{item.place}}</text>
+        <text>{{item.name}} {{item.phone}}</text>
+    </view>
 
-</view>
-
-<navigator url="../address_add/address_add" >
-<view class = "add" >
-
-	<image  class = "left"src = "../../images/add_addr.png"
-    mode = "widthFix" />
-  <view class = "text">新增个人地址</view>
-  <image class="right" src = "../../images/right.png"
-    mode = "widthFix" />
+    <navigator
+            url="../address_mod/address_mod?address={{item.address}}&name={{item.name}}&phone={{item.phone}}&qq={{item.qq}}&we_chat={{item.we_chat}}&place={{item.place}}&address_id={{item.address_id}}">
+        <view class="modify">
+            <image src="../../images/modify.png"
+                   mode="widthFix"/>
+        </view>
+    </navigator>
 
 </view>
+
+<navigator url="../address_add/address_add">
+    <view class="add">
+
+        <image class="left" src="../../images/add_addr.png"
+               mode="widthFix"/>
+        <view class="text">新增个人地址</view>
+        <image class="right" src="../../images/right.png"
+               mode="widthFix"/>
+
+    </view>
 </navigator>

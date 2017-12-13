@@ -1,38 +1,38 @@
 <view class="page">
 
-  <view class="weui-panel weui-panel_access">
-           
-            <view class="weui-panel__bd">
-                <view  class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">QQ</view>
-                        <view class="weui-media-box__desc">393019766</view>
-                    </view>
-                </view>
-                <view  class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">weixin</view>
-                        <view class="weui-media-box__desc">smallstrong0</view>
-                    </view>
-                </view>
-                <view  class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">电话</view>
-                        <view class="weui-media-box__desc">18268027142</view>
-                    </view>
+    <view class="weui-panel weui-panel_access">
+
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">QQ</view>
+                    <view class="weui-media-box__desc">393019766</view>
                 </view>
             </view>
-           
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">weixin</view>
+                    <view class="weui-media-box__desc">smallstrong0</view>
+                </view>
+            </view>
+            <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">电话</view>
+                    <view class="weui-media-box__desc">18268027142</view>
+                </view>
+            </view>
         </view>
 
-        <view class="weui-footer weui-footer_fixed-bottom">
-            <view class="weui-footer__links">
-                <navigator url="" class="weui-footer__link">由印</navigator>
-            </view>
-            <view class="weui-footer__text">Copyright © 2016-2017 由印集团</view>
+    </view>
+
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__links">
+            <navigator url="" class="weui-footer__link">由印</navigator>
         </view>
-    
+        <view class="weui-footer__text">Copyright © 2016-2017 由印集团</view>
+    </view>
+
 </view>

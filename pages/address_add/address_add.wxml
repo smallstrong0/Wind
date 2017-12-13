@@ -1,64 +1,63 @@
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
 
-<view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">收货人</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" bindinput='get_name' focus='true'  placeholder="姓名"/>
-                </view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">收货人</view>
             </view>
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">电话</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" bindinput='get_phone' type='number' maxlength="11" placeholder="手机号码"/>
-                </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_name' focus='true' placeholder="姓名"/>
             </view>
-
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">QQ</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" bindinput='get_qq' placeholder="qq号码"/>
-                </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">电话</view>
             </view>
-
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">微信(选填)</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input"  bindinput='get_we_chat' placeholder="微信号"/>
-                </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_phone' type='number' maxlength="11" placeholder="手机号码"/>
             </view>
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">地址</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" bindinput='get_address' placeholder="填写收货地址"/>
-                </view>
-            </view>
-
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__hd">
-                    <view class="weui-label">门牌号</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <input class="weui-input" bindinput='get_place' placeholder="例：14号楼"/>
-                </view>
-            </view>
-            
         </view>
 
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">QQ</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_qq' placeholder="qq号码"/>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">微信(选填)</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_we_chat' placeholder="微信号"/>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">地址</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_address' placeholder="填写收货地址"/>
+            </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+                <view class="weui-label">门牌号</view>
+            </view>
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput='get_place' placeholder="例：14号楼"/>
+            </view>
+        </view>
+
+    </view>
 
 
-<view class='btn_add' bindtap='add_address'>
-     <button class="weui-btn" type="primary">添加</button>
-</view>
-    
+    <view class='btn_add' bindtap='add_address'>
+        <button class="weui-btn" type="primary">添加</button>
+    </view>
+
 </view>

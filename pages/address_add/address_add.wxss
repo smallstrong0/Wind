@@ -1,11 +1,13 @@
-.button-sp-area{
+.button-sp-area {
     margin: 0 auto;
     padding-top: 15px;
     width: 60%;
 }
-.mini-btn{
+
+.mini-btn {
     margin-right: 5px;
 }
-.btn_add{
-  margin: 10px;
+
+.btn_add {
+    margin: 10px;
 }
