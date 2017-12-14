@@ -1,76 +1,85 @@
-.container{
-  width:100%;
-  height: 100%;
-  background-color: #f5f5f5;
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
 }
+
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 120px;
-  background-color: #FFC640;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background-color: #FFC640;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    color: #aaa;
 }
 
 .address {
-  background-color: #ffffff;
-  padding-top: 10px;
-  padding-left: 10px;
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
-  align-content:  center;
-  align-items: center;
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    align-content: center;
+    align-items: center;
 }
+
 .contact {
-  background-color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  display: flex;
-  flex-direction: row;
-  align-content:  center;
-  align-items: center;
-  margin-top: 1px;
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-top: 1px;
 }
+
 .contact-txet {
-  margin-left: 15px;
-  display: flex;
+    margin-left: 15px;
+    display: flex;
 }
 
 .address-txet {
-  margin-left: 15px;
-  display: flex;
+    margin-left: 15px;
+    display: flex;
 }
 
 .right_image {
-  align-items:  flex-end;
-  display: flex;
-  flex-direction: row;
-  margin-left: 80px;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
 }
 
 .line_full {
-  width:100%;
-  height:2rpx;
-  background:#aaa;
+    width: 100%;
+    height: 2 rpx;
+    background: #aaa;
 }
 
 .line_no_left {
-  width:100%;
-  margin-left: 40px;
-  height:2rpx;
-  background:#aaa;
+    width: 100%;
+    margin-left: 40px;
+    height: 2 rpx;
+    background: #aaa;
 }
 

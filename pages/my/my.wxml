@@ -3,11 +3,15 @@
         <block wx:if="{{hasUserInfo}}">
             <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
                    background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <view class="info">
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                <text class="userinfo-nickname">{{coin}} 印币</text>
+            </view>
+
         </block>
 
         <block wx:else>
-            <image style="width: 50px; height: 50px; margin-top: 10px;" src="../../images/avater.png"></image>
+            <!--<image style="width: 50px; height: 50px; margin-top: 10px;" src="../../images/avater.png"></image>-->
             <button style=" margin-top: 10px; justify-content:center" open-type="getUserInfo"
                     bindgetuserinfo="getUserInfo"> login
             </button>
