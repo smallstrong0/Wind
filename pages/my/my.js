@@ -1,11 +1,12 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var baseURL = "https://smallstrong.site/api/";
+const api = require('../../utils/api.js');
 Page({
     data: {
         userInfo: {},
-        hasUserInfo: false
+        hasUserInfo: false,
+        coin: 0,
     },
     onLoad: function () {
         var value = wx.getStorageSync('user_info')
@@ -15,27 +16,43 @@ Page({
                 hasUserInfo: true
             })
         }
-    },
-    getUserInfo: function (e) {
-        this.setData({
-            userInfo: e.detail.userInfo,
-            hasUserInfo: true
-        })
-        wx.setStorage({
-            key: "user_info",
-            data: e.detail.userInfo
-        })
-
-        var value = wx.getStorageSync('user_data')
-        if (value) {
-            console.log(value)
-            //发起网络请求
-            wx.request({
-                url: baseURL + 'mod_user_info?user_id=' + value.data.user_id + '&user_info=' + JSON.stringify(e.detail.userInfo),
-                success: function (res) {
-                    console.log(res.data)
-                }
+        var user_data = wx.getStorageSync('user_data')
+        if (user_data) {
+            this.setData({
+                coin: user_data.data.coin,
             })
         }
+    },
+    getUserInfo: function (e) {
+        var that = this;
+        wx.getUserInfo({
+            success: function (res) {
+                wx.setStorage({
+                    key: "user_info",
+                    data: res.userInfo
+                })
+                that.setData({
+                    userInfo: e.detail.userInfo,
+                    hasUserInfo: true
+                })
+                var value = wx.getStorageSync('user_data')
+                if (value) {
+                    console.log(value)
+                    api.mod_user_info({
+                        data: {
+                            'user_id': value.data.user_id,
+                            'user_info': JSON.stringify(res.userInfo),
+                        },
+                        success: (res) => {
+                            console.log(res.data)
+                        }
+                    })
+                }
+
+            },
+            fail: function (res) {
+                console.log('fail')
+            }
+        })
     }
 })
