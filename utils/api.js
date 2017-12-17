@@ -34,9 +34,13 @@ const login = (params) => {
 const mod_user_info = (params) => {
     wxRequest(params, `${apiURL}/mod_user_info`);
 };
+const get_user_coin = (params) => {
+    wxRequest(params, `${apiURL}/get_user_coin`);
+};
 
 
 module.exports = {
     login,
     mod_user_info,
+    get_user_coin,
 };

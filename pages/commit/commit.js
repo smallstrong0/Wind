@@ -69,6 +69,23 @@ Page({
         this.setData({
             categoryIndex: e.detail.value
         })
+        var index = e.detail.value
+        var s_coin = 0
+        if (index == 0) {
+            s_coin = 1
+        } else if (index == 1) {
+            s_coin = 5
+        } else if (index == 2) {
+            s_coin = 2
+        } else if (index == 3) {
+            s_coin = 10
+        } else if (index == 4) {
+            s_coin = 1
+        }
+        var pages = this.data.pages
+        this.setData({
+            coin: pages * s_coin
+        })
     },
 
     bindWayChange: function (e) {

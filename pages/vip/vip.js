@@ -71,6 +71,9 @@ Page({
                                         "Content-Type": "application/x-www-form-urlencoded"
                                     },
                                     success: function (res) {
+                                        wx.navigateBack({
+                                            delta: 1,
+                                        })
                                         console.log(res);
                                     },
                                     fail: function (err) {

@@ -16,10 +16,23 @@ Page({
                 hasUserInfo: true
             })
         }
-        var user_data = wx.getStorageSync('user_data')
-        if (user_data) {
-            this.setData({
-                coin: user_data.data.coin,
+
+    },
+    onShow: function () {
+        var that = this;
+        var value = wx.getStorageSync('user_data')
+        if (value) {
+            api.get_user_coin({
+                data: {
+                    'user_id': value.data.user_id,
+                },
+                success: (res) => {
+                    console.log(res.data)
+                    that.setData({
+                        coin: res.data.data.coin_num,
+                    })
+
+                }
             })
         }
     },
