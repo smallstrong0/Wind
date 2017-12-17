@@ -27,7 +27,6 @@ Page({
                     'user_id': value.data.user_id,
                 },
                 success: (res) => {
-                    console.log(res.data)
                     that.setData({
                         coin: res.data.data.coin_num,
                     })
@@ -50,21 +49,18 @@ Page({
                 })
                 var value = wx.getStorageSync('user_data')
                 if (value) {
-                    console.log(value)
                     api.mod_user_info({
                         data: {
                             'user_id': value.data.user_id,
                             'user_info': JSON.stringify(res.userInfo),
                         },
                         success: (res) => {
-                            console.log(res.data)
                         }
                     })
                 }
 
             },
             fail: function (res) {
-                console.log('fail')
             }
         })
     }

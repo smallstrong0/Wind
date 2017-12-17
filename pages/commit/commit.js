@@ -99,12 +99,11 @@ Page({
         var address_detail = that.data.address_detail
         if (address_detail != '' && that.data.pages != 0) {
             wx.showModal({
-                title: '圣旨',
-                content: '君上，请三思后提交',
-                confirmText: "下诏书",
-                cancelText: "再瞅瞅",
+                title: '订单提交',
+                content: '有印将为您提供高质量服务',
+                confirmText: "提交",
+                cancelText: "取消",
                 success: function (res) {
-                    console.log(res);
                     if (res.confirm) {
                         if (address_detail != '' && that.data.pages != 0) {
                             wx.getStorage({
@@ -133,21 +132,33 @@ Page({
                                             "Content-Type": "application/x-www-form-urlencoded"
                                         },
                                         success: function (res) {
-                                            console.log(res.data)
-                                            wx.showToast({
-                                                title: '已完成',
-                                                icon: 'success',
-                                                duration: 3000
-                                            });
+                                            if (res.data.code === 200) {
+                                                wx.showToast({
+                                                    title: '已完成',
+                                                    icon: 'success',
+                                                    duration: 3000
+                                                });
+                                            } else if (res.data.code === -1) {
+                                                wx.showModal({
+                                                    content: '印币不足',
+                                                    showCancel: false,
+                                                    success: function (res) {
+                                                        if (res.confirm) {
+                                                        }
+                                                    }
+                                                });
+                                            }
+
+
+                                        },
+                                        fail: function (res) {
 
                                         }
                                     });
                                 },
                             })
                         }
-                        console.log('任性提交')
                     } else {
-                        console.log('再瞅瞅')
                     }
                 }
             });
@@ -157,7 +168,6 @@ Page({
                 showCancel: false,
                 success: function (res) {
                     if (res.confirm) {
-                        console.log('用户点击确定')
                     }
                 }
             });

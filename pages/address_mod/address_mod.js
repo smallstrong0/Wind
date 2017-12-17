@@ -66,7 +66,6 @@ Page({
             url: "https://smallstrong.site/api/address_del?address_id=" + this.data.address_id,
             method: "GET",
             success: function (res) {
-                console.log(res.data)
                 wx.navigateBack({
                     delta: 1
                 })
@@ -97,7 +96,6 @@ Page({
                             "Content-Type": "application/x-www-form-urlencoded"
                         },
                         success: function (res) {
-                            console.log(res.data)
                             wx.navigateBack({
                                 delta: 1
                             })

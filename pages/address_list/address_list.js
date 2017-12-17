@@ -10,9 +10,7 @@ Page({
         });
     },
     result: function (e) {
-        console.log(e.currentTarget.dataset)
         var data = e.currentTarget.dataset.id
-        console.log(this.data.choose)
         if (this.data.choose) {
             var pages = getCurrentPages();
             var prevPage = pages[pages.length - 2]
@@ -49,7 +47,6 @@ Page({
         })
     },
     mod_address: function (e) {
-        console.log('mod_address')
     },
 
 });

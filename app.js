@@ -9,7 +9,6 @@ App({
                     api.login({
                         data: {'code': res.code},
                         success: (res) => {
-                            console.log(res.data)
                             wx.setStorage({
                                 key: "user_data",
                                 data: res.data
@@ -18,7 +17,6 @@ App({
                     })
 
                 } else {
-                    console.log('获取用户登录态失败！' + res.errMsg)
                 }
             },
 
@@ -32,14 +30,12 @@ App({
                 })
                 var value = wx.getStorageSync('user_data')
                 if (value) {
-                    console.log(value)
                     api.mod_user_info({
                         data: {
                             'user_id': value.data.user_id,
                             'user_info': JSON.stringify(res.userInfo),
                         },
                         success: (res) => {
-                            console.log(res.data)
                         }
                     })
                 }

@@ -32,7 +32,6 @@ Page({
         var money = e.currentTarget.dataset.money; //打印可以看到，此处已获取到了对应的id
         var user_id = ''
         var out_trade_no = ''
-        console.log(money)
         wx.getStorage({
             key: 'user_data',
             success: function (res) {
@@ -49,7 +48,6 @@ Page({
                         "Content-Type": "application/x-www-form-urlencoded"
                     },
                     success: function (res) {
-                        console.log(res)
                         out_trade_no = res.data.data.out_trade_no + ''
                         wx.requestPayment({
                             'timeStamp': res.data.data.timeStamp + '',
@@ -58,7 +56,6 @@ Page({
                             'signType': res.data.data.signType,
                             'paySign': res.data.data.paySign,
                             'success': function (res) {
-                                console.log(res);
                                 wx.request({
                                     url: "https://smallstrong.site/api/add_coin",
                                     method: 'POST',
@@ -74,21 +71,17 @@ Page({
                                         wx.navigateBack({
                                             delta: 1,
                                         })
-                                        console.log(res);
                                     },
                                     fail: function (err) {
-                                        console.log(err)
                                     }
                                 })
 
                             },
                             'fail': function (res) {
-                                console.log('fail:' + JSON.stringify(res));
                             }
                         })
                     },
                     fail: function (err) {
-                        console.log(err)
                     }
                 })
             }

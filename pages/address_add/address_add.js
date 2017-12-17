@@ -66,7 +66,6 @@ Page({
                             "Content-Type": "application/x-www-form-urlencoded"
                         },
                         success: function (res) {
-                            console.log(res.data)
                             wx.navigateBack({
                                 delta: 1
                             })
