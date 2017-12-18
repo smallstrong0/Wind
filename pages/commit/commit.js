@@ -164,7 +164,7 @@ Page({
             });
         } else {
             wx.showModal({
-                content: '请输入收货人信息及打印页数',
+                content: '信息不全',
                 showCancel: false,
                 success: function (res) {
                     if (res.confirm) {
